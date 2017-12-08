@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Persons>
+
+
+@{
+    ViewBag.Title = "Submission List";
+}
+
+<h1>@ViewData["Header"]</h1>
+<div class="container">
+    <div class="row">
+        <div class="box clearfix">
+
+            <table class="table table-hover" id="bootstrap-table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>SurName</th>
+                        <th>Birthday</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Serial Number</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var person in Model)
+                    {
+                        <tr>
+                            <td>@person.FirstName</td>
+                            <td>@person.SurName</td>
+                            <td>@person.BirthDay</td>
+                            <td>@person.Phone</td>
+                            <td>@person.Email</td>
+                            <td>@person.SerialNumber</td>
+
+
+                        </tr>
+
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

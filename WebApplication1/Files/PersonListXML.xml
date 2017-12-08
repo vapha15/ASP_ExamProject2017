@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ArrayOfPersons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Persons>
+    <FirstName>Hoang</FirstName>
+    <SurName>Van Pham</SurName>
+    <Email>hoangpham03996@gmail.com</Email>
+    <Phone>28256663</Phone>
+    <BirthDay>1222222</BirthDay>
+    <SerialNumber>111111</SerialNumber>
+  </Persons>
+  <Persons>
+    <FirstName>Nam</FirstName>
+    <SurName>Pham</SurName>
+    <Email>@hotmail</Email>
+    <Phone>12345678</Phone>
+    <BirthDay>13078010</BirthDay>
+    <SerialNumber>11</SerialNumber>
+  </Persons>
+  <Persons>
+    <FirstName>Nam</FirstName>
+    <SurName>Pham</SurName>
+    <Email>@hotmail</Email>
+    <Phone>12345678</Phone>
+    <BirthDay>13078010</BirthDay>
+    <SerialNumber>11</SerialNumber>
+  </Persons>
+  <Persons>
+    <FirstName>ee</FirstName>
+    <SurName>Pham</SurName>
+    <Email>@hotmail</Email>
+    <Phone>12345678</Phone>
+    <BirthDay>13078010</BirthDay>
+    <SerialNumber>11</SerialNumber>
+  </Persons>
+  <Persons>
+    <FirstName>Nam44445555</FirstName>
+    <SurName>Pham</SurName>
+    <Email>@hotmail</Email>
+    <Phone>12345678</Phone>
+    <BirthDay>13078010</BirthDay>
+    <SerialNumber>11</SerialNumber>
+  </Persons>
+</ArrayOfPersons>
