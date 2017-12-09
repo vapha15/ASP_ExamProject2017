@@ -1,22 +1,31 @@
-﻿using WebApplication1.Interfaces;
+﻿using System.Linq;
+using WebApplication1.Interfaces;
 using WebApplication1.Models;
 
 namespace WebApplication1.Services
 {
     public class SubmissionProcessor
     {
-        private readonly ISerialNumberChecker _serialNumberChecker;
-
-        public SubmissionProcessor(ISerialNumberChecker serialNumberChecker)
+        ///  private readonly ISerialNumberChecker _serialNumberChecker;
+        private readonly ISerialNumberContext _serialNumbersContext;
+        public SubmissionProcessor(ISerialNumberContext serialNumbersContext)
         {
-            _serialNumberChecker = serialNumberChecker;
+            //serialNumberChecker = serialNumberChecker;
+            _serialNumbersContext = serialNumbersContext;
         }
 
-        public bool ProcessSubmission(SerialNumbers number)
+        public bool ProcessSubmission(int number)
         {
-            bool succes = _serialNumberChecker.SerialNumberValidation(number);
+            SerialNumbers result = _serialNumbersContext.GetSerialNumbersList().FirstOrDefault(t => t.Number == number);
 
-            return succes;
+            if (result != null)
+            {
+                return (result.ThisNumberUsed == 0);
+            }
+
+            return false;
         }
+
+
     }
 }

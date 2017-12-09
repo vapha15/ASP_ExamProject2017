@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Linq;
 using WebApplication1.Models;
 using WebApplication1.Services;
 
@@ -12,23 +13,19 @@ namespace WebApplication1.Controllers
     public class HomeController : Controller
     {
 
-        //private List<Persons> listPerson = new List<Persons>();
-        //  private string XMLFileName = "C:\\Users\\Nam\\documents\\visual studio 2017\\Projects\\WebApplication1\\WebApplication1\\Files\\PersonListXML.xml";
-
         private readonly PersonListContext _personContext;
         private readonly SerialNumbersContext _serialNumbersContext;
         private readonly XMLSerialization _XMLSerializer;
-
+        private readonly SerialNumberCheck _serialNumberCheck;
+        private readonly SubmissionProcessor _submissionProcessor;
 
         public HomeController()
         {
             _personContext = new PersonListContext();
             _XMLSerializer = new XMLSerialization();
-
+            _serialNumberCheck = new SerialNumberCheck();
             _serialNumbersContext = new SerialNumbersContext();
-
-
-
+            _submissionProcessor = new SubmissionProcessor(_serialNumbersContext);
 
         }
         public IActionResult Index()
@@ -36,8 +33,6 @@ namespace WebApplication1.Controllers
 
             return View();
         }
-
-
 
         public IActionResult Formula()
         {
@@ -74,25 +69,48 @@ namespace WebApplication1.Controllers
                 };
 
 
-                _serialNumbersContext.CreateNewSerialNumberList();
-                var serialNumberList = _serialNumbersContext.GetSerialNumbersList();
+                //_serialNumbersContext.CreateNewSerialNumberList();
+                var serialNumberList = _XMLSerializer.GetXMLSerialNumberListFileName();
+                _serialNumbersContext.GetSerialNumbersList().AddRange(_XMLSerializer.Deserialize<SerialNumbers>(serialNumberList));
 
 
-                _XMLSerializer.Serialize(serialNumberList, _XMLSerializer.GetXMLSerialNumberListFileName());
+                // _XMLSerializer.Serialize(serialNumberList, _XMLSerializer.GetXMLSerialNumberListFileName());
+
+
+
 
                 var personXMLList = _XMLSerializer.GetXMLPersonListFileName();
                 // listPerson.AddRange(_XMLSerializer.Deserialize(XMLFileName));
                 _personContext.GetPersonList().AddRange(_XMLSerializer.Deserialize<Persons>(personXMLList));
 
 
-                _personContext.AddPersonToList(newPerson);
 
 
-                var personList = _personContext.GetPersonList();
-                var XMLPersonListFileName = _XMLSerializer.GetXMLPersonListFileName();
-                //_XMLSerializer.Serialize(_personContext.GetPersonList(), XMLFileName);
-                _XMLSerializer.Serialize(personList, XMLPersonListFileName);
-                return RedirectToAction("Succes", "Home");
+                if (_submissionProcessor.ProcessSubmission(newPerson.SerialNumber))
+                {
+
+                    _personContext.AddPersonToList(newPerson);
+                    var personList = _personContext.GetPersonList();
+                    var XMLPersonListFileName = _XMLSerializer.GetXMLPersonListFileName();
+                    //_XMLSerializer.Serialize(_personContext.GetPersonList(), XMLFileName);
+                    ;
+                    _XMLSerializer.Serialize(personList, XMLPersonListFileName);
+
+                    var updateNumber = _serialNumbersContext.GetSerialNumbersList().First(x => x.Number == newPerson.SerialNumber);
+
+
+                    updateNumber.ThisNumberUsed = 1;
+
+                    var serialNumberList2 = _serialNumbersContext.GetSerialNumbersList();
+
+
+                    _XMLSerializer.Serialize(serialNumberList2, _XMLSerializer.GetXMLSerialNumberListFileName());
+
+                    return RedirectToAction("Succes", "Home");
+
+                }
+
+                return RedirectToAction("Failed", "Home");
 
             }
 

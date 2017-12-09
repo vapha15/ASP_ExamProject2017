@@ -18,7 +18,7 @@ namespace WebApplication1.Models
 
         public string BirthDay { get; set; }
         [Required(ErrorMessage = "The SerialNumber attribute is required")]
-        public int? SerialNumber { get; set; }
+        public int SerialNumber { get; set; }
 
     }
 }

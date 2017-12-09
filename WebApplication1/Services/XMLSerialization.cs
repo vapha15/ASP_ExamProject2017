@@ -90,7 +90,7 @@ namespace WebApplication1.Services
         public List<T> Deserialize<T>(String fileName)
         {
             var itemList = new List<T>();
-            serializer = new XmlSerializer(typeof(List<Persons>));
+            serializer = new XmlSerializer(typeof(List<T>));
             if (!File.Exists(fileName))
             {
                 return itemList;

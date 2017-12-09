@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using WebApplication1.Interfaces;
 using WebApplication1.Models;
 
 namespace WebApplication1.Services
 {
-    public class SerialNumbersContext
+    public class SerialNumbersContext : ISerialNumberContext
     {
-        private int Numbers = 100;
+        private int Numbers = 3;
         public List<SerialNumbers> listSerialNumbers { get; set; }
 
         public SerialNumbersContext()
@@ -16,12 +17,12 @@ namespace WebApplication1.Services
         public void CreateNewSerialNumberList()
         {
             SerialNumbers newSerialNumbers;
-            for (int i = 0; i <Numbers ; i++)
+            for (int i = 1; i < Numbers; i++)
             {
                 newSerialNumbers = new SerialNumbers(i);
                 listSerialNumbers.Add(newSerialNumbers);
             }
-          
+
 
         }
 

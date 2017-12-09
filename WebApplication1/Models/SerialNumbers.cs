@@ -6,12 +6,12 @@ namespace WebApplication1.Models
     public class SerialNumbers
     {
         public int Number { get; set; }
-        public bool ThisNumberUsed { get; set; }
+        public int ThisNumberUsed { get; set; }
 
         public SerialNumbers(int number)
         {
             Number = number;
-            ThisNumberUsed = false;
+
         }
 
         public SerialNumbers()

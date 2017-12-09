@@ -1,48 +1,46 @@
 ﻿using System.Collections.Generic;
-using WebApplication1.Interfaces;
-using WebApplication1.Models;
 
 namespace WebApplication1.Services
 {
-    public class SerialNumberCheck : ISerialNumberChecker
+    public class SerialNumberCheck
     {
-        private List<SerialNumbers> listNumber;
+        private Dictionary<int, int> listNumber;
 
 
-        public SerialNumberCheck()
-        {
-            listNumber = new List<SerialNumbers>();
+        //public SerialNumberCheck()
+        //{
+        //    listNumber = new Dictionary<int, int>();
 
-            insertNumberToList();
+        //    insertNumberToList();
 
-        }
+        //}
 
-        public bool SerialNumberValidation(SerialNumbers number)
-        {
-
-            return listNumber.Contains(number);
-
-        }
-
-        public void insertNumberToList()
-        {
-
-            if (listNumber.Count == 0)
-            {
-                for (int i = 0; i < 100; i++)
-                {
-
-                    listNumber[i] = new SerialNumbers(i + 1);
-                }
-            }
-            else
-            {
-                return;
-            }
-
-        }
+        //public bool SerialNumberValidation(int number)
+        //{
+        //    //SerialNumbers test = new SerialNumbers(number);
 
 
+        //    return listNumber.ContainsKey(number);
+
+        //}
+
+        //public void insertNumberToList()
+        //{
+
+        //    if (listNumber.Count == 0)
+        //    {
+        //        for (int i = 0; i < 4; i++)
+        //        {
+
+        //            listNumber.Add((i + 1), 0);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return;
+        //    }
+
+        //}
 
     }
 }
