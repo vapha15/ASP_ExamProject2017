@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <StartupObject></StartupObject>
+    <StartupObject>WebApplication1.Program</StartupObject>
     <ApplicationIcon />
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>

@@ -13,8 +13,10 @@ namespace WebApplication1.Services
         List<SerialNumbers> persoList;
 
         //Remember to change the FilePath to a path that exist in your pc
-        private string XMLFileNamePersons = "C:\\Users\\Nam\\documents\\visual studio 2017\\Projects\\WebApplication1\\WebApplication1\\Files\\PersonListXML.xml";
-        private string XMLFileNameSerialNumbers = "C:\\Users\\Nam\\documents\\visual studio 2017\\Projects\\WebApplication1\\WebApplication1\\Files\\SerialNumberListXML.xml";
+        // private string XMLFileNamePersons = "C:\\Users\\Nam\\documents\\visual studio 2017\\Projects\\WebApplication1\\WebApplication1\\Files\\PersonListXML.xml";
+        // private string XMLFileNameSerialNumbers = "C:\\Users\\Nam\\documents\\visual studio 2017\\Projects\\WebApplication1\\WebApplication1\\Files\\SerialNumberListXML.xml";
+        private string XMLFileNameSerialNumbers = Path.GetFullPath("Files\\SerialNumberListXML.xml");
+        private string XMLFileNamePersons = Path.GetFullPath("Files\\PersonListXML.xml");
 
         private XmlSerializer serializer;
         public void Serialize<T>(List<T> list, String fileName)
@@ -48,45 +50,6 @@ namespace WebApplication1.Services
         }
 
 
-
-
-        //public List<Persons> Deserialize(String fileName)
-        //{
-        //    serializer = new XmlSerializer(typeof(List<Persons>));
-        //    if (!File.Exists(fileName))
-        //    { return personList = new List<Persons>(); }
-
-        //    try
-        //    {
-        //        //XmlDocument xmldoc = new XmlDocument();
-        //        using (FileStream stream = new FileStream(fileName, FileMode.Open))
-        //        {
-        //            personList = (List<Persons>)serializer.Deserialize(stream);
-
-        //        }
-
-        //    }
-
-        //    catch (Exception e)
-        //    {
-
-        //    }
-        //    return personList;
-
-        //}
-
-        //public String GetXMLFileName()
-        //{
-        //    return XMLFileNamePersons;
-        //}
-
-
-        //internal string GetXMLPersonListFileName()
-        //{
-        //    return XMLFileNameSerialNumbers;
-        //}
-
-
         public List<T> Deserialize<T>(String fileName)
         {
             var itemList = new List<T>();
@@ -114,11 +77,6 @@ namespace WebApplication1.Services
             return itemList;
 
         }
-
-        //public String GetXMLFileName()
-        //{
-        //    return XMLFileNamePersons;
-        //}
 
 
         public string GetXMLPersonListFileName()

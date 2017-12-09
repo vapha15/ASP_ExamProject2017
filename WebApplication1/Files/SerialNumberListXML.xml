@@ -10,7 +10,7 @@
   </SerialNumbers>
   <SerialNumbers>
     <Number>3</Number>
-    <ThisNumberUsed>1</ThisNumberUsed>
+    <ThisNumberUsed>0</ThisNumberUsed>
   </SerialNumbers>
   <SerialNumbers>
     <Number>4</Number>
@@ -30,7 +30,7 @@
   </SerialNumbers>
   <SerialNumbers>
     <Number>8</Number>
-    <ThisNumberUsed>1</ThisNumberUsed>
+    <ThisNumberUsed>0</ThisNumberUsed>
   </SerialNumbers>
   <SerialNumbers>
     <Number>9</Number>
@@ -42,7 +42,7 @@
   </SerialNumbers>
   <SerialNumbers>
     <Number>11</Number>
-    <ThisNumberUsed>0</ThisNumberUsed>
+    <ThisNumberUsed>1</ThisNumberUsed>
   </SerialNumbers>
   <SerialNumbers>
     <Number>12</Number>
@@ -398,7 +398,7 @@
   </SerialNumbers>
   <SerialNumbers>
     <Number>100</Number>
-    <ThisNumberUsed>1</ThisNumberUsed>
+    <ThisNumberUsed>0</ThisNumberUsed>
   </SerialNumbers>
   <SerialNumbers>
     <Number>1</Number>

@@ -2,42 +2,18 @@
 <ArrayOfPersons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Persons>
     <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>3</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam4444</FirstName>
-    <SurName>Pham</SurName>
-    <Email>ww</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>100</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
     <SurName>Van</SurName>
     <Email>vapha15@student.sdu.dk</Email>
     <Phone>28802312</Phone>
-    <BirthDay>01-01-2017</BirthDay>
-    <SerialNumber>8</SerialNumber>
+    <BirthDay>1222222</BirthDay>
+    <SerialNumber>1</SerialNumber>
+  </Persons>
+  <Persons>
+    <FirstName>Nam</FirstName>
+    <SurName>Pham</SurName>
+    <Email>rwst@hotmail.com</Email>
+    <Phone>12345678</Phone>
+    <BirthDay>13078010</BirthDay>
+    <SerialNumber>11</SerialNumber>
   </Persons>
 </ArrayOfPersons>

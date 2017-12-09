@@ -69,13 +69,15 @@ namespace WebApplication1.Controllers
                 };
 
 
-               // _serialNumbersContext.CreateNewSerialNumberList();  //uncomment this line first time the programs runs
 
-                var serialNumberList = _XMLSerializer.GetXMLSerialNumberListFileName();
-                _serialNumbersContext.GetSerialNumbersList().AddRange(_XMLSerializer.Deserialize<SerialNumbers>(serialNumberList));
+                //  _serialNumbersContext.CreateNewSerialNumberList();  //uncomment this line first time the programs runs and comment it again
+
+                var serialNumberList = _serialNumbersContext.GetSerialNumbersList();
+                var serialnumberXMLList = _XMLSerializer.GetXMLSerialNumberListFileName();
+                _serialNumbersContext.GetSerialNumbersList().AddRange(_XMLSerializer.Deserialize<SerialNumbers>(serialnumberXMLList));
 
 
-                // _XMLSerializer.Serialize(serialNumberList, _XMLSerializer.GetXMLSerialNumberListFileName());
+                _XMLSerializer.Serialize(serialNumberList, serialnumberXMLList);
 
 
 
