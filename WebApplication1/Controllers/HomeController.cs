@@ -69,7 +69,8 @@ namespace WebApplication1.Controllers
                 };
 
 
-                //_serialNumbersContext.CreateNewSerialNumberList();
+               // _serialNumbersContext.CreateNewSerialNumberList();  //uncomment this line first time the programs runs
+
                 var serialNumberList = _XMLSerializer.GetXMLSerialNumberListFileName();
                 _serialNumbersContext.GetSerialNumbersList().AddRange(_XMLSerializer.Deserialize<SerialNumbers>(serialNumberList));
 
@@ -92,8 +93,7 @@ namespace WebApplication1.Controllers
                     _personContext.AddPersonToList(newPerson);
                     var personList = _personContext.GetPersonList();
                     var XMLPersonListFileName = _XMLSerializer.GetXMLPersonListFileName();
-                    //_XMLSerializer.Serialize(_personContext.GetPersonList(), XMLFileName);
-                    ;
+                    //  _XMLSerializer.Serialize(_personContext.GetPersonList(), XMLFileName); 
                     _XMLSerializer.Serialize(personList, XMLPersonListFileName);
 
                     var updateNumber = _serialNumbersContext.GetSerialNumbersList().First(x => x.Number == newPerson.SerialNumber);
@@ -130,6 +130,10 @@ namespace WebApplication1.Controllers
             return View(_personContext.GetPersonList());
         }
 
+        public IActionResult Failed()
+        {
+            return View();
+        }
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

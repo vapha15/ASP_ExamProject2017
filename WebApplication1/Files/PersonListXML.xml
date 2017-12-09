@@ -9,107 +9,35 @@
     <SerialNumber>1</SerialNumber>
   </Persons>
   <Persons>
+    <FirstName>Nam</FirstName>
+    <SurName>Pham</SurName>
+    <Email>@hotmail</Email>
+    <Phone>12345678</Phone>
+    <BirthDay>13078010</BirthDay>
+    <SerialNumber>1</SerialNumber>
+  </Persons>
+  <Persons>
+    <FirstName>Nam</FirstName>
+    <SurName>Pham</SurName>
+    <Email>@hotmail</Email>
+    <Phone>12345678</Phone>
+    <BirthDay>13078010</BirthDay>
+    <SerialNumber>3</SerialNumber>
+  </Persons>
+  <Persons>
     <FirstName>Nam4444</FirstName>
     <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
+    <Email>ww</Email>
     <Phone>12345678</Phone>
     <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
+    <SerialNumber>100</SerialNumber>
   </Persons>
   <Persons>
     <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail111</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>1</SerialNumber>
-  </Persons>
-  <Persons>
-    <FirstName>Nam</FirstName>
-    <SurName>Pham</SurName>
-    <Email>@hotmail</Email>
-    <Phone>12345678</Phone>
-    <BirthDay>13078010</BirthDay>
-    <SerialNumber>2</SerialNumber>
+    <SurName>Van</SurName>
+    <Email>vapha15@student.sdu.dk</Email>
+    <Phone>28802312</Phone>
+    <BirthDay>01-01-2017</BirthDay>
+    <SerialNumber>8</SerialNumber>
   </Persons>
 </ArrayOfPersons>

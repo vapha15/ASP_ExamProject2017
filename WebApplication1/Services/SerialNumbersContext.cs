@@ -6,7 +6,7 @@ namespace WebApplication1.Services
 {
     public class SerialNumbersContext : ISerialNumberContext
     {
-        private int Numbers = 3;
+        private int Numbers = 101;
         public List<SerialNumbers> listSerialNumbers { get; set; }
 
         public SerialNumbersContext()

@@ -11,11 +11,12 @@ namespace WebApplication1.Models
         [Required(ErrorMessage = "The SurName attribute is required")]
         public string SurName { get; set; }
         [Required(ErrorMessage = "The Email attribute is required")]
+        [Display(Name = "Email address")]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
         [Required(ErrorMessage = "The Phone attribute is required")]
         public int? Phone { get; set; }
         [Required(ErrorMessage = "The BirthDay attribute is required")]
-
         public string BirthDay { get; set; }
         [Required(ErrorMessage = "The SerialNumber attribute is required")]
         public int SerialNumber { get; set; }

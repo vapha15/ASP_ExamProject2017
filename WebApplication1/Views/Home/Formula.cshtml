@@ -16,28 +16,28 @@
     <div class="row">
         <div class="col-lg-2">
             @Html.LabelFor(m => m.FirstName)
-            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", autofocus = "autofocus" })
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @placeholder = "fx Hanne", autofocus = "autofocus" })
             @Html.ValidationMessageFor(x => x.FirstName)
         </div>
     </div>
     <div class="row">
         <div class="col-lg-2">
             @Html.LabelFor(m => m.SurName)
-            @Html.TextBoxFor(m => m.SurName, new { @class = "form-control", autofocus = "autofocus" })
+            @Html.TextBoxFor(m => m.SurName, new { @class = "form-control", @placeholder = "fx Hansen", autofocus = "autofocus" })
             @Html.ValidationMessageFor(x => x.SurName)
         </div>
     </div>
     <div class="row">
         <div class="col-lg-2">
             @Html.LabelFor(m => m.BirthDay)
-            @Html.TextBoxFor(m => m.BirthDay, new { @class = "form-control", autofocus = "autofocus" })
+            @Html.TextBoxFor(m => m.BirthDay, new { @class = "form-control", @placeholder = "fx 01-01-2017", autofocus = "autofocus" })
             @Html.ValidationMessageFor(x => x.BirthDay)
         </div>
     </div>
     <div class="row">
         <div class="col-lg-2">
             @Html.LabelFor(m => m.Phone)
-            @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", autofocus = "autofocus" })
+            @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", @placeholder = "fx 8888 8888", autofocus = "autofocus" })
             @Html.ValidationMessageFor(x => x.Phone)
         </div>
 
@@ -45,14 +45,14 @@
     <div class="row">
         <div class="col-lg-2">
             @Html.LabelFor(m => m.Email)
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", autofocus = "autofocus" })
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "fx Hanne@hotmail.com", autofocus = "autofocus" })
             @Html.ValidationMessageFor(x => x.Email)
         </div>
     </div>
     <div class="row">
         <div class="col-lg-2">
             @Html.LabelFor(m => m.SerialNumber)
-            @Html.TextBoxFor(m => m.SerialNumber, new { @class = "form-control", autofocus = "autofocus" })
+            @Html.TextBoxFor(m => m.SerialNumber, new { @class = "form-control", @placeholder = "fx 1-100", autofocus = "autofocus" })
             @Html.ValidationMessageFor(x => x.SerialNumber)
         </div>
     </div>
