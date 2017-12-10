@@ -4,7 +4,7 @@ The Prize Application has 3 pages, the home-page where there is some 3d effect, 
 
 Code Example
 
-One should check that the two serialNumberListXML.xml and personListXML.xml files are pointen at the correct directory path. But I dont think it will become a problem I have try to avoid the problem with the Path.GetFullPath method in the XMLSerialization class at line 18-19
+One should check that the two serialNumberListXML.xml and personListXML.xml files are pointed at the correct directory path. But I dont think it will become a problem because I have tried to avoid the problem with the Path.GetFullPath method in the XMLSerialization class at line 18-19
 
 Motivation
 
