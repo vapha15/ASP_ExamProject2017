@@ -1,7 +1,5 @@
 Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains what the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
-
 The Prize Application has 3 pages, the home-page where there is som 3d effect, the formula-page where one can fill in some personal data and a serialnumber, the submission-page where all valid sumbission is displayed, this page can display fx 5,10 or 20 submission info.
 
 Code Example
