@@ -17,16 +17,7 @@ namespace WebApplication1.Services
         {
             list.Add(newPerson);
 
-
         }
-
-        public void AddAllPersonToList(List<Persons> list)
-        {
-            //list.Add(list)
-
-
-        }
-
 
         public List<Persons> GetPersonList()
         {

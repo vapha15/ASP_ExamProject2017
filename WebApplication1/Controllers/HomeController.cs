@@ -16,15 +16,15 @@ namespace WebApplication1.Controllers
         private readonly PersonListContext _personContext;
         private readonly SerialNumbersContext _serialNumbersContext;
         private readonly XMLSerialization _XMLSerializer;
-        private readonly SerialNumberCheck _serialNumberCheck;
         private readonly SubmissionProcessor _submissionProcessor;
 
         public HomeController()
         {
             _personContext = new PersonListContext();
             _XMLSerializer = new XMLSerialization();
-            _serialNumberCheck = new SerialNumberCheck();
             _serialNumbersContext = new SerialNumbersContext();
+
+            //the SubmissionProcessor takes an ISerialNumberContext to avoid the dependency
             _submissionProcessor = new SubmissionProcessor(_serialNumbersContext);
 
         }
@@ -55,7 +55,7 @@ namespace WebApplication1.Controllers
         public IActionResult Submit(WebApplication1.Models.Persons viewModel)
         {
 
-
+            //checks wether the modelState isvalid or not
             if (ModelState.IsValid)
             {
                 var newPerson = new Persons
@@ -68,26 +68,27 @@ namespace WebApplication1.Controllers
                     Phone = viewModel.Phone
                 };
 
-
-
                 //  _serialNumbersContext.CreateNewSerialNumberList();  //uncomment this line first time the programs runs and comment it again
 
+
+                // fetch the serialNumbersList
                 var serialNumberList = _serialNumbersContext.GetSerialNumbersList();
+                //NumbersList as a string
                 var serialnumberXMLList = _XMLSerializer.GetXMLSerialNumberListFileName();
+                //loads the serialNumbersList into an ArrayList<SerialNumbers>
                 _serialNumbersContext.GetSerialNumbersList().AddRange(_XMLSerializer.Deserialize<SerialNumbers>(serialnumberXMLList));
 
-
+                // serialize the serialNumbersList
                 _XMLSerializer.Serialize(serialNumberList, serialnumberXMLList);
 
 
-
-
+                //the same proces goes for the personList
                 var personXMLList = _XMLSerializer.GetXMLPersonListFileName();
-                // listPerson.AddRange(_XMLSerializer.Deserialize(XMLFileName));
+
                 _personContext.GetPersonList().AddRange(_XMLSerializer.Deserialize<Persons>(personXMLList));
 
 
-
+                //checks if serialnumbers does exist and is not used before
 
                 if (_submissionProcessor.ProcessSubmission(newPerson.SerialNumber))
                 {
@@ -125,8 +126,6 @@ namespace WebApplication1.Controllers
         {
 
             ViewData["Header"] = "The submission list";
-
-            // listPerson.AddRange(_XMLSerializer.Deserialize(XMLFileName));
             var XMLPersonListFileName = _XMLSerializer.GetXMLPersonListFileName();
             _personContext.GetPersonList().AddRange(_XMLSerializer.Deserialize<Persons>(XMLPersonListFileName));
             return View(_personContext.GetPersonList());

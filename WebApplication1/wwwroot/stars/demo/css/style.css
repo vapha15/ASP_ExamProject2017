@@ -91,7 +91,18 @@ canvas{
     left:0;
     bottom:0;
     right:0;
-    height:10%;
+    height:100%;
     width:100%;
+}
+
+#particles-js-inner {
+   
+    position: absolute;
+    top: 40%;
+    left: 48%;
+    height: 100px;
+    width: 100px;
+    background-color: white;    
+    margin: 0 auto;
 }
 

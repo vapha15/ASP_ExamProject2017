@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\SerialNumberCheck.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="SerialNumberListXML.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>
 

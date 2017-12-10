@@ -45,10 +45,7 @@ namespace WebApplication1.Services
 
             }
 
-
-
         }
-
 
         public List<T> Deserialize<T>(String fileName)
         {
@@ -61,7 +58,7 @@ namespace WebApplication1.Services
 
             try
             {
-                //XmlDocument xmldoc = new XmlDocument();
+
                 using (FileStream stream = new FileStream(fileName, FileMode.Open))
                 {
                     itemList = (List<T>)serializer.Deserialize(stream);

@@ -6,11 +6,11 @@ namespace WebApplication1.Services
 {
     public class SubmissionProcessor
     {
-        ///  private readonly ISerialNumberChecker _serialNumberChecker;
+
         private readonly ISerialNumberContext _serialNumbersContext;
         public SubmissionProcessor(ISerialNumberContext serialNumbersContext)
         {
-            //serialNumberChecker = serialNumberChecker;
+
             _serialNumbersContext = serialNumbersContext;
         }
 
