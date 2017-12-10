@@ -1,6 +1,6 @@
 Synopsis
 
-The Prize Application has 3 pages, the home-page where there is som 3d effect, the formula-page where one can fill in some personal data and a serialnumber, the submission-page where all valid sumbission is displayed, this page can display fx 5,10 or 20 submission info.
+The Prize Application has 3 pages, the home-page where there is some 3d effect, the formula-page where one can fill in some personal data and a serialnumber, the submission-page where all valid sumbission is displayed, this page can display fx 5,10 or 20 submission info.
 
 Code Example
 
