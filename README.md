@@ -2,28 +2,25 @@ Synopsis
 
 At the top of the file there should be a short introduction and/ or overview that explains what the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
 
+The Prize Application has 3 pages, the home-page where there is som 3d effect, the formula-page where one can fill in some personal data and a serialnumber, the submission-page where all valid sumbission is displayed, this page can display fx 5,10 or 20 submission info.
+
 Code Example
 
-Show what the library does as concisely as possible, developers should be able to figure out how your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+One should check that the two serialNumberListXML.xml and personListXML.xml files are pointen at the correct directory path. But I dont think it will become a problem I have try to avoid the problem with the Path.GetFullPath method in the XMLSerialization class at line 18-19
 
 Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
+The project is a part of the ASP.Net Exam 2017 - The motivation for this project is the Exam and because i want to work with Web design esepcially the back-end, and later also the front-end.
 
 Installation
 
-Provide code examples and explanations of how to get the project.
+There has not been added 3th. part installion so this should not be necessary..
 
-API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
 Tests
 
-Describe and show how to run the tests with code examples.
+The project includes a Nunit Test, just right click on the TestProject and run it.
 
-Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-License
+Fall 2017 
+Name: Nam Pham  
+StudentId: vapha15
