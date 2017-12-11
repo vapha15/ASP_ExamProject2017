@@ -19,6 +19,8 @@ namespace WebApplication1.Services
         private string XMLFileNamePersons = Path.GetFullPath("Files\\PersonListXML.xml");
 
         private XmlSerializer serializer;
+
+        //this method serialize the list with type T, which means  that it is a generic method can take generic types of list as input. It has a "FileNotFoundException"
         public void Serialize<T>(List<T> list, String fileName)
         {
             if (list == null) { return; }
@@ -39,6 +41,10 @@ namespace WebApplication1.Services
                 }
 
             }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
             catch (Exception e)
             {
                 Console.WriteLine(e.StackTrace);
@@ -46,6 +52,8 @@ namespace WebApplication1.Services
             }
 
         }
+
+        //this method deserialize the list again. It has a "FileNotFoundException"
 
         public List<T> Deserialize<T>(String fileName)
         {
@@ -55,6 +63,7 @@ namespace WebApplication1.Services
             {
                 return itemList;
             }
+
 
             try
             {
@@ -66,10 +75,14 @@ namespace WebApplication1.Services
                 }
 
             }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
 
             catch (Exception e)
             {
-
+                Console.WriteLine(e.StackTrace);
             }
             return itemList;
 

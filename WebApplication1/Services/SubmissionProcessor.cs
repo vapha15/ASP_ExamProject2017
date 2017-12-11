@@ -14,9 +14,11 @@ namespace WebApplication1.Services
             _serialNumbersContext = serialNumbersContext;
         }
 
+        //checks if the number exist in the serialnumberlist and that is not used, which is equal to 0
         public bool ProcessSubmission(int number)
         {
             SerialNumbers result = _serialNumbersContext.GetSerialNumbersList().FirstOrDefault(t => t.Number == number);
+
 
             if (result != null)
             {

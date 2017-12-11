@@ -14,6 +14,8 @@ namespace WebApplication1.Services
             listSerialNumbers = new List<SerialNumbers>();
         }
 
+        //creates a new serialnumberlist with numbers from 1-100..this method is only loaded one time in the life cyklus of this application. when all numbers have been used, ic can be loaded again
+
         public void CreateNewSerialNumberList()
         {
             SerialNumbers newSerialNumbers;
@@ -27,7 +29,7 @@ namespace WebApplication1.Services
         }
 
 
-
+        //return the serialnumberList
         public List<SerialNumbers> GetSerialNumbersList()
         {
 

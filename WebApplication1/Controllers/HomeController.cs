@@ -88,7 +88,7 @@ namespace WebApplication1.Controllers
                 _personContext.GetPersonList().AddRange(_XMLSerializer.Deserialize<Persons>(personXMLList));
 
 
-                //checks if serialnumbers does exist and is not used before
+                //checks if serialnumbers does exist and is not used before, if that true then it updates the list and set the numbers variable " ThisNumberUsed" to 1
 
                 if (_submissionProcessor.ProcessSubmission(newPerson.SerialNumber))
                 {
@@ -121,6 +121,7 @@ namespace WebApplication1.Controllers
 
         }
 
+        //retrieves data from the list and displays the data in a tabel
 
         public IActionResult List()
         {

@@ -13,12 +13,19 @@ namespace WebApplication1.Services
             list = new List<Persons>();
         }
 
+        //add person to the personList
         public void AddPersonToList(Persons newPerson)
         {
-            list.Add(newPerson);
+            if (newPerson != null)
+            {
+                list.Add(newPerson);
+            }
+
+
 
         }
 
+        //returns the personlist
         public List<Persons> GetPersonList()
         {
 
