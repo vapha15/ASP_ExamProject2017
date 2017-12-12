@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Files\**" />
+    <Content Remove="Files\**" />
+    <EmbeddedResource Remove="Files\**" />
+    <None Remove="Files\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\IXMLSerialize.cs" />
     <Compile Remove="Services\SerialNumberCheck.cs" />
   </ItemGroup>
 
@@ -24,8 +32,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Files\" />
     <Folder Include="Abstract\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XmlSerializeClassLibrary\XmlSerializeClassLibrary.csproj" />
   </ItemGroup>
 
 </Project>

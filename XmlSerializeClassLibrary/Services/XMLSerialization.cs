@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
-using WebApplication1.Models;
 
-namespace WebApplication1.Services
+namespace XmlSerializeClassLibrary.Services
 {
     public class XMLSerialization
     {
-        List<Persons> personList;
-        List<SerialNumbers> persoList;
+        //List<Persons> personList;
+        //List<SerialNumbers> persoList;
 
         //Remember to change the FilePath to a path that exist in your pc
-        // private string XMLFileNamePersons = "C:\\Users\\Nam\\documents\\visual studio 2017\\Projects\\WebApplication1\\WebApplication1\\Files\\PersonListXML.xml";
-        // private string XMLFileNameSerialNumbers = "C:\\Users\\Nam\\documents\\visual studio 2017\\Projects\\WebApplication1\\WebApplication1\\Files\\SerialNumberListXML.xml";
-        private string XMLFileNameSerialNumbers = Path.GetFullPath("Files\\SerialNumberListXML.xml");
-        private string XMLFileNamePersons = Path.GetFullPath("Files\\PersonListXML.xml");
+        private string XMLFileNamePersons = "C:\\Users\\Nam\\documents\\visual studio 2017\\Projects\\WebApplication1\\XmlSerializeClassLibrary\\Files\\PersonListXML.xml";
+        private string XMLFileNameSerialNumbers = "C:\\Users\\Nam\\documents\\visual studio 2017\\Projects\\WebApplication1\\XmlSerializeClassLibrary\\Files\\SerialNumberListXML.xml";
+        //private readonly string XMLFileNameSerialNumbers = Path.GetFullPath("Files\\SerialNumberListXML.xml");
+        //private readonly string XMLFileNamePersons = Path.GetFullPath("Files\\PersonListXML.xml");
 
         private XmlSerializer serializer;
 

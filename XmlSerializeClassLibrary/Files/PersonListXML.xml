@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfPersons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Persons>
+    <FirstName>Nam</FirstName>
+    <SurName>Pham</SurName>
+    <Email>Test@hotmail.com</Email>
+    <Phone>88888888</Phone>
+    <BirthDay>01-01-2012</BirthDay>
+    <SerialNumber>1</SerialNumber>
+  </Persons>
+  <Persons>
+    <FirstName>Nam</FirstName>
+    <SurName>Pham</SurName>
+    <Email>Test@hotmail.com</Email>
+    <Phone>88888888</Phone>
+    <BirthDay>01-01-2012</BirthDay>
+    <SerialNumber>11</SerialNumber>
+  </Persons>
+  <Persons>
+    <FirstName>Nam</FirstName>
+    <SurName>Pham</SurName>
+    <Email>Test@hotmail.com</Email>
+    <Phone>88888888</Phone>
+    <BirthDay>01-01-2012</BirthDay>
+    <SerialNumber>6</SerialNumber>
+  </Persons>
+</ArrayOfPersons>
