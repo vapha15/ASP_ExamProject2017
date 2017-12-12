@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 using WebApplication1.Services;
 
 namespace UnitTestProject_AspNet_Exam2017
@@ -17,7 +18,7 @@ namespace UnitTestProject_AspNet_Exam2017
             _submissionProcessor = new SubmissionProcessor(_serialNumbersContext);
         }
 
-
+        //Test that the SerialNumberlist contains number 100
         [TestMethod]
         public void TestNumber100Exist()
         {
@@ -30,6 +31,7 @@ namespace UnitTestProject_AspNet_Exam2017
 
         }
 
+        //Test that the SerialNumberlist does not contain number 101
         [TestMethod]
         public void TestNumber101NotExist()
         {
@@ -38,6 +40,20 @@ namespace UnitTestProject_AspNet_Exam2017
             bool test = _submissionProcessor.ProcessSubmission(a);
 
             Assert.IsFalse(test);
+
+        }
+
+        //Sets a SerialNumber to Used and then checks that the number is used
+        [TestMethod]
+        public void TestNumberIsUsed()
+        {
+            int number = 55;
+            var updateNumber = _serialNumbersContext.GetSerialNumbersList().First(x => x.Number == number);
+
+            updateNumber.ThisNumberUsed = 1;
+
+            //now the boolean ThisNumberUsed is set to 1, so this Asssert should return false
+            Assert.IsFalse(_submissionProcessor.ProcessSubmission(number));
 
         }
 
