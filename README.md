@@ -15,9 +15,12 @@ Installation
 There has not been added 3th. part installion so this should not be necessary..
 
 
-Tests
+Project
 
-The project includes a Nunit Test, just right click on the TestProject and run it.
+The project includes 3 projects:
+1)The main application WebApplication1.
+2)The Class Library Project XmlSerializeClassLibrary, that referes to the main project WebApplication1.
+3)The Unit Test project UnitTestProject_AspNet_Exam2017, just right click on the TestProject and run it.
 
 Fall 2017 
 Name: Nam Pham  
